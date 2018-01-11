@@ -1,0 +1,7 @@
+<div class="notifications" [ngClass]="notifications.position">  
+  <div *ngFor="let alert of notifications.alerts" class="{{ cssClass(alert) }}">
+    {{alert.message}}
+    <span class="space"></span>
+    <a *ngIf="!alert.autoClose" class="close" (click)="removeAlert(alert)">&times;</a>
+  </div>
+</div>
